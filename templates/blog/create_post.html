@@ -50,8 +50,9 @@
 				<div class="field">
 					<label class="label">{{ form.body.label_tag }}</label>
 					<div class="control">
+						{{ form.text | safe }}
 						{{ form.media }}
-						{{ form.body|safe }}
+						{{ form.as_p }}
 					</div>
 				</div>
 				<div class="field">
