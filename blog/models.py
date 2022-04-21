@@ -44,7 +44,7 @@ class Post(models.Model):
 	author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_posts")
 	title = models.CharField(max_length=1000)
 	description = models.CharField(max_length=1000)
-	body = RichTextField()
+	body = RichTextField(blank=True, null=True)
 	slug = models.SlugField()
 	header_image = models.ImageField(upload_to='imgs/', blank=True, null=True)
 	pub_date = models.DateField(auto_now_add=True)
