@@ -23,18 +23,31 @@ I realised one day that one of my questions, or if you may call it “struggles�
 - Users looking for inspiration for cooking recipes
 
 ## User Stories
-- Viewing and Navigation
 
 | AS A     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
-| Site User | access the website with any devices | Use the website anytime and anywhere |
-| Site User | all the important services are accesible from nav bar| Don't need to scroll to find important information |
+| Site User | access the website with any devices | use the website anytime and anywhere |
+| Site User | access all the important services from the nav bar| navigate through the blog with ease |
 | Site User | click on a post  | read the full text |
+| Site User | register an account | comment and add my own posts |
+| Site User/Admin | view comments on an individual post | read the conversation |
+| Site User | add comments to the blog posts | be involved in the conversation |
+| Site User/Admin | create, read, update and delete posts | manage my blog content |
 
-| Site User | register an account | I can comment and add my own posts |
-| Site User | view comments on an individual post | I can read the conversation |
-| Site User | Have a shopping cart icon on nav bar | Always check the current order and checkout when I want |
+### Color Scheme
+Color scheme is important as this is one of the first things site visitors notice when visiting the site. I chose white & blue to be the site's primary colors because these colors are easy and provide a positive feeling. The navigation bar remains a very bright gray color. Overall, the design keeps a very classic and simplistic look.
 
-| Site User | leave comments on a post | I can be involved in the conversation |
-| Site User/Admin | create, read, update and delete posts | I can manage my blog content |
-| Site User | Have a shopping cart icon on nav bar | Always check the current order and checkout when I want |
+## Features
+
+### Accounts App
+
+The accounts app will allow users to register for free and create their own unique account. The user is able to customise a profile with a short description and a profile picture. This is built using Django's authentication and authorization to validate profile data.
+
+![profile](media/imgs/profilescreen.png)
+
+
+The users will register using the registration form, found it the navbar. Registered users will be able to login by using the login form with their username and password.
+
+![signup1](media/imgs/signup1.png)
+![signup2](media/imgs/signup2.png)
+
