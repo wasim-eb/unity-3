@@ -28,5 +28,13 @@ I realised one day that one of my questions, or if you may call it “struggles�
 | AS A     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
 | Site User | access the website with any devices | Use the website anytime and anywhere |
-| Site User | All the important services are accesible from nav bar| Don't need to scroll to find important information |
+| Site User | all the important services are accesible from nav bar| Don't need to scroll to find important information |
+| Site User | click on a post  | read the full text |
+
+| Site User | register an account | I can comment and add my own posts |
+| Site User | view comments on an individual post | I can read the conversation |
+| Site User | Have a shopping cart icon on nav bar | Always check the current order and checkout when I want |
+
+| Site User | leave comments on a post | I can be involved in the conversation |
+| Site User/Admin | create, read, update and delete posts | I can manage my blog content |
 | Site User | Have a shopping cart icon on nav bar | Always check the current order and checkout when I want |
