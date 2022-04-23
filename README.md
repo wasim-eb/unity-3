@@ -39,7 +39,7 @@ Color scheme is important as this is one of the first things site visitors notic
 
 ## Features
 
-### Accounts App
+### Accounts
 
 The accounts app will allow users to register for free and create their own unique account. The user is able to customise a profile with a short description and a profile picture. This is built using Django's authentication and authorization to validate profile data.
 
@@ -51,3 +51,23 @@ The users will register using the registration form, found it the navbar. Regist
 ![signup1](media/imgs/signup1.png)
 ![signup2](media/imgs/signup2.png)
 
+### Homepage
+
+Displays the Featured Post, and the latest posts in the blog
+
+![featuredpost](media/imgs/featuredpost.png)
+
+On this page, a user can filter the posts by two categories, either Food or Drinks.
+
+![categories](media/imgs/categories.png)
+
+### Navbar
+###### While logged out
+Navbar is fixed at the top of pages across the site, so that the site visitors easily navigate the whole site.  Navbar contains  `Logo`, `Categories`, `Signup`, `Login` and `Search`
+
+![loggedout](media/imgs/navbarloggedout.png)
+###### While logged in
+
+When logged in, the `Signup` &  `Login` are replaced by  `Create Post` & `Logout`
+
+![loggedin](media/imgs/navbarloggedin.png)
