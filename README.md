@@ -128,11 +128,11 @@ There were 3 issues that I found:
 
 CKeditor was being used for the text box feature. It was working fine locally but after being deployed to Heroku, it stopped showing.
 
-![ckeditor](media/imgs/ckeditor.png)
+![ckeditor-bug](media/imgs/ckeditor-bug.png)
 
 I was able to resolve this by adding the ckeditor script to the base.html template.
 
-![ckeditor](media/imgs/ckeditor.png)
+![ckeditor-fix](media/imgs/ckeditor-fix.png)
 
 The last notable error was with my database key. I'm not sure how this happened but the database key for the postgres was not matching the one in Config Vars on Heroku. This was resolved by just copying the key from the config vars to my project again.
 
@@ -174,3 +174,59 @@ Desktop - Firefox v.67
   * [Django](https://docs.djangoproject.com/) -  Used as my Python web framework.
   * [Heroku](https://www.heroku.com/) - for deployment
   * [PostgreSQL](https://www.postgresql.org/) - Used as relational SQL database plugin via Heroku.
+
+  ## Deployment
+I used GitHub for my version control and Heroku to host the live version of my project.
+Heroku had been experiencing a security breach at the time, so the option to connect the app to a Github repository was down. To go around this issue, I had to use the Heroku cli in Gitpod which I hadn't done before.
+
+To deploy my website to Heroku, 
+I used the following steps:
+
+1. Created the app using a unique name in Heroku.
+
+2. Went to the **Resources** tab in Heroku and searched for **Heroku Postgres** in the 'Add-Ons' section.
+
+3. Selected the free **Hobby** level.
+
+4. Updated the `env.py` file within my local workspace with the `DATABASE_URL` details, and the `settings.py` to connect to the database using the `dj_database_url` package.
+
+5. Ran the `python manage.py makemigrations`, `python manage.py migrate`, `python manage.py createsuperuser` commands to migrate the models into Heroku Postgres and create a new super user in the new PostgreSQL database.
+
+6. Went to the **Settings** tab in Heroku and clicked on the **Reveal Config Vars** button.
+
+7. Copied and pasted all of the `env.py` default variables into Heroku's Config Vars settings.
+
+KEY | VALUE
+--- | -----
+DATABASE_URL | link to db |
+CLOUDINARY_URL | cloudinary secret key |
+SECRET_KEY | site secret key |
+
+8. Install the Heroku cli with the command: curl https://cli-assets.heroku.com/install.sh | sh
+
+9. Login to heroku and enter your details.
+- command: heroku login -i
+
+10. Get your app name from heroku.
+- command: heroku apps
+
+11. Set the heroku remote. (Replace <app_name> with your actual app name)
+- command: heroku git:remote -a <app_name>
+
+12. Add, commit and push to github
+- command: git add .
+- command: git commit -m "Deploy to Heroku via CLI"
+
+13. Push to both github and heroku
+- command: git push origin main
+- command: git push heroku main
+
+14. Updated the `settings.py` file with the relevant configuration for static and media file storage.
+
+15. Created a Procfile and added the following:
+    gunicorn unity.wsgi
+
+18. Ran the `git add .`, `git commit -m "<commit-message>"` and `git push` commands to push all changes to my GitHub repository.
+
+The app was successfully deployed to Heroku at this stage.
+
