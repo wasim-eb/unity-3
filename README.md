@@ -62,12 +62,57 @@ On this page, a user can filter the posts by two categories, either Food or Drin
 ![categories](media/imgs/categories.png)
 
 ### Navbar
-###### While logged out
+##### While logged out
 Navbar is fixed at the top of pages across the site, so that the site visitors easily navigate the whole site.  Navbar contains  `Logo`, `Categories`, `Signup`, `Login` and `Search`
 
 ![loggedout](media/imgs/navbarloggedout.png)
-###### While logged in
+##### While logged in
 
 When logged in, the `Signup` &  `Login` are replaced by  `Create Post` & `Logout`
 
 ![loggedin](media/imgs/navbarloggedin.png)
+
+The navbar is reduced to a hamburger menu on smaller screen sizes
+
+![hamburgermenu](media/imgs/hamburgermenu.png)
+
+### Post Page & Comments
+The blog post page includes a section for the entire post, where you will access the bigger scaled picture and you can read through the post which you have chosen.
+![blogpost](media/imgs/blogpost.png)
+
+
+The user can find the comment section to the right, where the user can read and be involved in the conversation.
+![comment](media/imgs/comment.png)
+
+As a user, you can save your posts as draft and you can also edit your post after they have been published.
+
+![editpost](media/imgs/editpost.png)
+
+### Search box
+
+The search box is a function where you are able to find certain blog posts of your own choice.
+
+![search](media/imgs/search.png)
+
+## Technologies Used
+
+
+  * [Visual Studio Code](https://code.visualstudio.com/) - The IDE used for developing this project.
+  * [GitHub](https://github.com/) - Used to store and share all project code remotely.
+  * [GitPod] - Used to finalise the project and refine the code and minor errors
+
+**Front-End Technologies**
+  * [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Used as the base for markup text.
+  * [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3) -  Used to add styles to the HTML.
+  * [Font Awesome](https://www.bootstrapcdn.com/fontawesome/) - Used for icons in the website.
+  * [Bootstrap4](https://www.bootstrapcdn.com/) - Used to align the elements in the website using the grid system. And also used to create the hamburger button, the models, the buttons to style the forms.
+  * [CKeditor](https://ckeditor.com/) - Used to add a rich text editor to stylize the blog posts.
+  * [Cloudinary] (https://cloudinary.com/) - Used to store the CSS files and images used in the blog.
+  * [Widget_tweaks] - This tool was used to customize the form fields in the templates
+
+    **Back-End Technologies**
+
+  * [Python 3.8.10](https://www.python.org/) - Used as the back-end programming language.
+  * [Django](https://docs.djangoproject.com/) -  Used as my Python web framework.
+  * [Heroku](https://www.heroku.com/) - for deployment
+  * [PostgreSQL](https://www.postgresql.org/) - Used as relational SQL database plugin via Heroku.
