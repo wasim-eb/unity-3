@@ -94,6 +94,64 @@ The search box is a function where you are able to find certain blog posts of yo
 
 ![search](media/imgs/search.png)
 
+## Bugs
+
+I was having a problem while deploying my project to Heroku. I was getting the error: “Error: Could not build wheels for backports.zoneinfo, which is  required to install pyproject.toml-based projects.
+Push rejected, failed to compile with Python app.”
+I found the solution on stack overflow and the issue turned out to be coming from Heroku. The problem was that when I’m replying the project to Heroku, it uses python version 3.10.x as a default and backports.zoneinfo is not working properly with this version. I was suggested to switch to version 3.8.x(stable) which apparently should be more stable. 
+I did this by creating a runtime.txt file in the root directory and adding the content “python-3.8.10”. 
+![pythonfix](media/imgs/pythonfix.png)
+
+
+After deploying my project to Heroku, I experienced a number of bugs. At first, I had some trouble accessing the create post models where I would get an issue with the csrf tokens.
+
+Here is a screenshot of the error:
+![csrf-error](media/imgs/csrf-error.png)
+
+The issue was fixed by adding this code to the setting.py file:
+![csrf-fix](media/imgs/csrf-fix.png)
+
+Another issue that I encountered was that Heroku wasn't loading the css files properly and all the images were showing original sizes.
+![css-error](media/imgs/csserror.png)
+
+Heroku was not loading the static files properly that were uploaded to Cloudinary. After some tutoring, we resolved this issue by adding and refactoring some code in the settings.py file.
+There were 3 issues that I found:
+
+- This command on line 18 was under-indented - An indent should be a tab, or 4 spaces, it was only 3 spaces
+![bug1](media/imgs/bug1.png)
+
+- The same issue was on line 115 - only 3 spaces, rather than a tab (4 spaces)
+![bug2](media/imgs/bug2.png)
+
+- And finally, I added the CLOUDINARY_STORAGE env var and linked it to the CLOUDINARY_URL
+![bug3](media/imgs/bug3.png)
+
+CKeditor was being used for the text box feature. It was working fine locally but after being deployed to Heroku, it stopped showing.
+
+![ckeditor](media/imgs/ckeditor.png)
+
+I was able to resolve this by adding the ckeditor script to the base.html template.
+
+![ckeditor](media/imgs/ckeditor.png)
+
+The last notable error was with my database key. I'm not sure how this happened but the database key for the postgres was not matching the one in Config Vars on Heroku. This was resolved by just copying the key from the config vars to my project again.
+
+
+
+### Responsiveness
+
+Chrome DevTools and physical devices were used throughout development for a number of purposes, one of which was to test the responsiveness and rendering across a range of sizes and devices. As issues were found they were either fixed at the time or noted and returned to later.
+
+The site has been tested successfully on
+
+Apple Macbook Pro - Safari browser, Google Chrome and Mozilla Firefox
+
+Apple iPhone 6,7 &8S - Safari Browser
+
+Desktop - Chrome v.74
+
+Desktop - Firefox v.67
+
 ## Technologies Used
 
 
@@ -107,7 +165,7 @@ The search box is a function where you are able to find certain blog posts of yo
   * [Font Awesome](https://www.bootstrapcdn.com/fontawesome/) - Used for icons in the website.
   * [Bootstrap4](https://www.bootstrapcdn.com/) - Used to align the elements in the website using the grid system. And also used to create the hamburger button, the models, the buttons to style the forms.
   * [CKeditor](https://ckeditor.com/) - Used to add a rich text editor to stylize the blog posts.
-  * [Cloudinary] (https://cloudinary.com/) - Used to store the CSS files and images used in the blog.
+  * [Cloudinary](https://cloudinary.com/) - Used to store the CSS files and images used in the blog.
   * [Widget_tweaks] - This tool was used to customize the form fields in the templates
 
     **Back-End Technologies**
