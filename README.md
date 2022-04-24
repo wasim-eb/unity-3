@@ -237,7 +237,7 @@ The app was successfully deployed to Heroku at this stage.
 - The project's code was developed based on the understanding of the “I think, therefore I blog” lesson from Code Institute, but was customized, modified and enhanced to fit the project purposes.
 - [Stack Overflow](https://stackoverflow.com/) was extremely helpful and useful during the process of building this project.
 - [Django](https://docs.djangoproject.com/en/3.1/) I also constantly referred to the Django documentation source during the development
-- [Youtube] (https://www.youtube.com/) Many lessons were found on Youtube. I spent some time watching Codemy.com's videos for getting the CKeditor to work.
+- [Youtube](https://www.youtube.com/) Many lessons were found on Youtube. I spent some time watching Codemy.com's videos for getting the CKeditor to work.
 ### Content and Media
 - - Most of the images were taken from [Unsplash](https://unsplash.com/). This version is only an educational exercise.
 
