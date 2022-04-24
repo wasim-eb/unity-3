@@ -177,7 +177,9 @@ Desktop - Firefox v.67
 
   ## Deployment
 I used GitHub for my version control and Heroku to host the live version of my project.
-Heroku had been experiencing a security breach at the time, so the option to connect the app to a Github repository was down. To go around this issue, I had to use the Heroku cli in Gitpod which I hadn't done before.
+The 'Unity - Food & Drinks Blog' project was developed using the [GitPod](https://www.gitpod.io/) online IDE and
+using Git & GitHub for version control. It is hosted on the [Heroku](https://heroku.com/) platform, with static files and user-uploaded images being hosted in Cloudinary.
+Heroku had been experiencing a security breach at the time of deployment, so the option to connect the app to a Github repository was down. To go around this issue, I had to use the Heroku cli in Gitpod which I hadn't done before.
 
 To deploy my website to Heroku, 
 I used the following steps:
@@ -229,4 +231,20 @@ SECRET_KEY | site secret key |
 18. Ran the `git add .`, `git commit -m "<commit-message>"` and `git push` commands to push all changes to my GitHub repository.
 
 The app was successfully deployed to Heroku at this stage.
+
+## Credits
+### Code
+- The project's code was developed based on the understanding of the “I think, therefore I blog” lesson from Code Institute, but was customized, modified and enhanced to fit the project purposes.
+- [Stack Overflow](https://stackoverflow.com/) was extremely helpful and useful during the process of building this project.
+- [Django](https://docs.djangoproject.com/en/3.1/) I also constantly referred to the Django documentation source during the development
+- [Youtube] (https://www.youtube.com/) Many lessons were found on Youtube. I spent some time watching Codemy.com's videos for getting the CKeditor to work.
+### Content and Media
+- - Most of the images were taken from [Unsplash](https://unsplash.com/). This version is only an educational exercise.
+
+### Acknowledgements
+I would like to thank everyone who has helped me throughout the development of this project:      
+- **My mentor** [Guido](https://github.com/guidocecilio) for his guidance, very useful tips and advice!         
+- **Code Institute tutors** Christine, Ed, Alex, John, Alan, Sean and others for their help to debug issues, assistance and support!   
+- Many thanks to my fellow students, **Slack community** and, of course, to my friend Arnaud Moulds and **my family** for the time, patience, help and support!         
+For the project itself I received inspiration from various cooking websites, my interest and lack of motivation to cook.
 
