@@ -1,5 +1,7 @@
 # Unity - Food & Drinks
 
+![responsive](media/imgs/responsive.png)
+
 ## Full Stack Frameworks with Django - Milestone Project 4
 
 [Unity - Food & Drinks](https://unity-food-blog.herokuapp.com/) is an online recipe blog, where people can post and find new recipes for different kind of food and drinks. The thought behind this blog was to unite different recipes from all over the world, therefore the name “Unity”. 
@@ -167,6 +169,7 @@ Desktop - Firefox v.67
   * [CKeditor](https://ckeditor.com/) - Used to add a rich text editor to stylize the blog posts.
   * [Cloudinary](https://cloudinary.com/) - Used to store the CSS files and images used in the blog.
   * [Widget_tweaks] - This tool was used to customize the form fields in the templates
+  * [Bulma-CSS-library](https://bulma.io/) - I used the Bulma CSS-library to easily style my website.
 
     **Back-End Technologies**
 
@@ -237,6 +240,7 @@ The app was successfully deployed to Heroku at this stage.
 - The project's code was developed based on the understanding of the “I think, therefore I blog” lesson from Code Institute, but was customized, modified and enhanced to fit the project purposes.
 - [Stack Overflow](https://stackoverflow.com/) was extremely helpful and useful during the process of building this project.
 - [Django](https://docs.djangoproject.com/en/3.1/) I also constantly referred to the Django documentation source during the development
+- [Bulma-css-library](https://bulma.io/documentation/) This is the documentation I followed to install the library. I used the cdn mentioned in the documentation.
 - [Youtube](https://www.youtube.com/) Many lessons were found on Youtube. I spent some time watching Codemy.com's videos for getting the CKeditor to work.
 ### Content and Media
 - - Most of the images were taken from [Unsplash](https://unsplash.com/). This version is only an educational exercise.
@@ -247,4 +251,6 @@ I would like to thank everyone who has helped me throughout the development of t
 - **Code Institute tutors** Christine, Ed, Alex, John, Alan, Sean and others for their help to debug issues, assistance and support!   
 - Many thanks to my fellow students, **Slack community** and, of course, to my friend Arnaud Moulds and **my family** for the time, patience, help and support!         
 For the project itself I received inspiration from various cooking websites, my interest and lack of motivation to cook.
+-----
 
+Wasim El-Bechlaoui
