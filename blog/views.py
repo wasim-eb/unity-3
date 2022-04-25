@@ -7,6 +7,10 @@ from django.contrib.auth import authenticate, login
 
 
 def index(request):
+    """
+    A view to render the first blog page, 
+    with the featured post
+    """
     ctgry = None
     categry = None
     featured_post = Post.featured.all().order_by('-pub_date')[0]
@@ -29,6 +33,10 @@ def index(request):
 
 
 def archives(request):
+    """
+    A view to render the archives page,
+    with categories and search post
+    """
     ctgry = None
     categry = None
     posts = Post.published.all().order_by('-pub_date')
@@ -48,6 +56,9 @@ def archives(request):
 
 
 def search(request):
+    """
+    The search for posts view
+    """
     if request.method == 'GET':
         posts = []
         searched = request.GET.get('searched', None)
@@ -61,7 +72,9 @@ def search(request):
 
 
 def signup(request):
-
+    """
+    The signup form for new users
+    """
     form1 = CustomUserCreationForm()
     form2 = ProfileForm()
 
@@ -78,8 +91,7 @@ def signup(request):
             login(request, new_user)
 
         if form2.is_valid():
-
-            # Configuration for Profile form
+            
             instance = form2.save(commit=False)
             instance.user = new_user
             image = form2.cleaned_data['photo']
@@ -100,7 +112,10 @@ def signup(request):
 
 
 def create_post(request):
-
+    """
+    A view to create posts in the blog,
+    with all the forms
+    """
     form = CreatePostForm()
     if request.method == "POST":
         form = CreatePostForm(request.POST, request.FILES)
@@ -152,6 +167,10 @@ def detail(request, post_id):
 
 
 def edit_post(request, post_id):
+    """
+    A view to edit an existing post,
+    similar to creating new post
+    """
     post = Post.objects.get(id=post_id)
     form = CreatePostForm(instance=post)
     if request.method == "POST":
@@ -173,13 +192,20 @@ def edit_post(request, post_id):
 
 
 def delete_post(request, post_id):
-
+    """
+    Delete a post created by the user
+    """
     post = Post.objects.get(id=post_id)
     post.delete()
     return redirect('profile_page')
 
 
 def profile_page(request, profile_id=None):
+    """
+    A view to render the profile page
+    with all filled out user information
+    and post history
+    """
     if profile_id:
         profile = Profile.objects.get(id=profile_id)
     elif request.user.is_authenticated:
@@ -195,6 +221,9 @@ def profile_page(request, profile_id=None):
 
 
 def edit_profile(request, profile_id):
+    """
+    Edit existing profile view
+    """
     profile = Profile.objects.get(id=profile_id)
     form = ProfileForm(instance=profile)
     if request.method == "POST":

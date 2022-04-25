@@ -96,7 +96,13 @@ The search box is a function where you are able to find certain blog posts of yo
 
 ![search](media/imgs/search.png)
 
-## Bugs
+## Testing
+### Code Validation
+- [W3C HTML Validator tool](https://validator.w3.org/#validate_by_input) was used to validate my HTML code.
+- [W3C CSS Validator tool](https://jigsaw.w3.org/css-validator/#validate_by_input) was used to validate my CSS code.
+- The W3C Validator tool doesn't recognise the Bulma CSS templating or the cloudinary links, which has resulted in a few errors in relation to the CSS and HTML code. However, all other code is validating fine.
+- [Pep8 Online tool](http://pep8online.com/) was used to validate my Python syntax.
+### Bugs
 
 I was having a problem while deploying my project to Heroku. I was getting the error: “Error: Could not build wheels for backports.zoneinfo, which is  required to install pyproject.toml-based projects.
 Push rejected, failed to compile with Python app.”
